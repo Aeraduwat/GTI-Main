@@ -29,7 +29,14 @@ app.use('/api/reuniones', require('./routes/reunion'));
 //     resp.send("app is working")
 // })
 
+var PORT = 4000;
 
-app.listen(4000);
+// App listening on the below port
+app.listen(PORT, function(err){
+   if (err) console.log(err);
+   console.log("Server listening on PORT", PORT);
+});
+
+//app.listen(4000);
 
 console.log('desde app');

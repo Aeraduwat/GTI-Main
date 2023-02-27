@@ -17,7 +17,6 @@ if(procces.env.NODE_ENV == "production"){
     })
 }
 */
-
 connectarDB();
 app.use(cors());
 app.use(express.json());

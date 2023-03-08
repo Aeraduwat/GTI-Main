@@ -1049,8 +1049,13 @@ class RegistrarReunionComponent {
       observaciones: this.reunionForm.get('observaciones')?.value
     };
     console.log(Reunion);
-    this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
-    this.router.navigate(['/dashboard/registrar-reunion']);
+    this._reunionService.guardarReunion(Reunion).subscribe(data => {
+      this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
+      this.router.navigate(['/dashboard/registrar-reunion']);
+    }, error => {
+      console.log(error);
+      this.reunionForm.reset();
+    });
   }
   obtenerReunion() {
     this._reunionService.getReuniones().subscribe(data => {
@@ -1590,13 +1595,16 @@ class ReunionesService {
   //enlace
   constructor(http) {
     this.http = http;
-    this.url = 'http://18.231.175.65/api/reuniones/';
+    this.url = 'http://localhost:4000/api/reuniones/';
   }
   getReuniones() {
     return this.http.get(this.url);
   }
   eliminarReunion(id) {
     return this.http.delete(this.url + id);
+  }
+  guardarReunion(reuniones) {
+    return this.http.post(this.url, reuniones);
   }
 }
 ReunionesService.ɵfac = function ReunionesService_Factory(t) {

@@ -1,3 +1,4 @@
+import { Reuniones } from './../models/reuniones';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -6,9 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReunionesService {
-  url='http://18.231.175.65/api/reuniones/';
-  //enlace
 
+  url='http://localhost:4000/api/reuniones/';
+  //enlace
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +21,10 @@ export class ReunionesService {
 
   eliminarReunion(id: string): Observable<any>{ 
     return this.http.delete(this.url + id)
+  }
+
+  guardarReunion(reuniones : Reuniones): Observable<any> {
+    return this.http.post(this.url, reuniones);
   }
 
 }

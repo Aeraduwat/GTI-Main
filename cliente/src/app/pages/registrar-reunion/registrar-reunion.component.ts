@@ -13,6 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 
 export class RegistrarReunionComponent implements OnInit {
+
   reunionForm: FormGroup;
   listarReuniones : Reuniones[] = [];
 
@@ -54,9 +55,14 @@ export class RegistrarReunionComponent implements OnInit {
       observaciones: this.reunionForm.get('observaciones')?.value
   }
   console.log(Reunion);
+  this._reunionService.guardarReunion(Reunion).subscribe(data => {
+      this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
+      this.router.navigate(['/dashboard/registrar-reunion']);
+  }, error => {
+    console.log(error);
+    this.reunionForm.reset();
+  })
 
-  this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
-  this.router.navigate(['/dashboard/registrar-reunion']);
 }
 
 obtenerReunion(){

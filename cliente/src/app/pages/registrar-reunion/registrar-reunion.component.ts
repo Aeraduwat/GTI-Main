@@ -59,6 +59,7 @@ export class RegistrarReunionComponent implements OnInit {
       this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
       this.router.navigate(['/dashboard/registrar-reunion']);
       this.obtenerReunion();
+      this.reunionForm.reset();
 
   }, error => {
     console.log(error);

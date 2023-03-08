@@ -11,12 +11,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AppRoutingModule": () => (/* binding */ AppRoutingModule)
 /* harmony export */ });
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 124);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ 124);
 /* harmony import */ var _nopage_found_nopage_found_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nopage-found/nopage-found.component */ 5134);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 4666);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ 4666);
 /* harmony import */ var _pages_pages_routing_module__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/pages-routing.module */ 9730);
 /* harmony import */ var _auth_auth_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth/auth-routing.module */ 431);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 2560);
+/* harmony import */ var _pages_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/dashboard/dashboard.component */ 4789);
+/* harmony import */ var _pages_tablas_tablas_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/tablas/tablas.component */ 5955);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 2560);
+
+
 
 
 
@@ -28,10 +32,14 @@ const routes = [{
   path: '',
   redirectTo: '/login',
   pathMatch: 'full'
+}, {
+  path: 'dashboard',
+  component: _pages_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_3__.DashboardComponent
+}, {
+  path: 'tablas',
+  component: _pages_tablas_tablas_component__WEBPACK_IMPORTED_MODULE_4__.TablasComponent
 },
 /*
-{ path:'inicio', component:DashboardComponent},
-{ path:'tablas', component:TablasComponent},
 { path:'perfil', component:PerfilComponent},
 { path:'registrar-reunion', component:RegistrarReunionComponent},
 */
@@ -43,16 +51,16 @@ class AppRoutingModule {}
 AppRoutingModule.ɵfac = function AppRoutingModule_Factory(t) {
   return new (t || AppRoutingModule)();
 };
-AppRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({
+AppRoutingModule.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineNgModule"]({
   type: AppRoutingModule
 });
-AppRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({
-  imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule.forRoot(routes), _pages_pages_routing_module__WEBPACK_IMPORTED_MODULE_1__.PagesRoutingModule, _auth_auth_routing_module__WEBPACK_IMPORTED_MODULE_2__.AuthRoutingModule, _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
+AppRoutingModule.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector"]({
+  imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule.forRoot(routes), _pages_pages_routing_module__WEBPACK_IMPORTED_MODULE_1__.PagesRoutingModule, _auth_auth_routing_module__WEBPACK_IMPORTED_MODULE_2__.AuthRoutingModule, _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule]
 });
 (function () {
-  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](AppRoutingModule, {
-    imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule, _pages_pages_routing_module__WEBPACK_IMPORTED_MODULE_1__.PagesRoutingModule, _auth_auth_routing_module__WEBPACK_IMPORTED_MODULE_2__.AuthRoutingModule],
-    exports: [_angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule]
+  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](AppRoutingModule, {
+    imports: [_angular_common__WEBPACK_IMPORTED_MODULE_6__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule, _pages_pages_routing_module__WEBPACK_IMPORTED_MODULE_1__.PagesRoutingModule, _auth_auth_routing_module__WEBPACK_IMPORTED_MODULE_2__.AuthRoutingModule],
+    exports: [_angular_router__WEBPACK_IMPORTED_MODULE_7__.RouterModule]
   });
 })();
 
@@ -1703,7 +1711,7 @@ BreadcrumbsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE
   selectors: [["app-breadcrumbs"]],
   decls: 13,
   vars: 3,
-  consts: [[1, "content-header"], [1, "container-fluid"], [1, "row", "mb-2"], [1, "col-sm-6"], [1, "breadcrumb", "float-sm-right"], [1, "breadcrumb-item"], ["href", "#"], ["class", "breadcrumb-item active", 4, "ngIf"], [1, "breadcrumb-item", "active"]],
+  consts: [[1, "content-header"], [1, "container-fluid"], [1, "row", "mb-2"], [1, "col-sm-6"], [1, "breadcrumb", "float-sm-right"], [1, "breadcrumb-item"], ["routerLink", "/dashboard"], ["class", "breadcrumb-item active", 4, "ngIf"], [1, "breadcrumb-item", "active"]],
   template: function BreadcrumbsComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "h1");
@@ -1725,7 +1733,7 @@ BreadcrumbsComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.titulo === "");
     }
   },
-  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf],
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterLink],
   styles: ["\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
 });
 
@@ -1799,7 +1807,7 @@ HeaderComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__[
   selectors: [["app-header"]],
   decls: 44,
   vars: 0,
-  consts: [[1, "main-header", "navbar", "navbar-expand", "navbar-dark", "navbar-dark"], [1, "navbar-nav"], [1, "nav-item"], ["data-widget", "pushmenu", "href", "#", "role", "button", 1, "nav-link"], [1, "fas", "fa-bars"], [1, "nav-item", "d-none", "d-sm-inline-block"], ["routerLink", "/dashboard", 1, "nav-link"], [1, "dropdown"], ["type", "button", "id", "dropdownMenuButton1", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "btn", "btn-secondary", "dropdown-toggle"], ["aria-labelledby", "dropdownMenuButton1", 1, "dropdown-menu"], ["href", "#", 1, "dropdown-item"], ["routerLink", "/dashboard/tablas", "href", "#", 1, "dropdown-item"], ["routerLink", "/dashboard/registrar-reunion", 1, "nav-link"], ["routerLink", "/dashboard/usuarios", 1, "nav-link"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "d-none", "d-sm-inline-block", "float-end"], ["href", "#", 1, "nav-link"]],
+  consts: [[1, "main-header", "navbar", "navbar-expand", "navbar-dark", "navbar-dark"], [1, "navbar-nav"], [1, "nav-item"], ["data-widget", "pushmenu", "href", "#", "role", "button", 1, "nav-link"], [1, "fas", "fa-bars"], [1, "nav-item", "d-none", "d-sm-inline-block"], ["routerLink", "/dashboard", 1, "nav-link"], [1, "dropdown"], ["type", "button", "id", "dropdownMenuButton1", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "btn", "btn-secondary", "dropdown-toggle"], ["aria-labelledby", "dropdownMenuButton1", 1, "dropdown-menu"], ["disabled", "", 1, "dropdown-item"], [1, "dropdown-item"], ["routerLink", "/dashboard/tablas", 1, "dropdown-item"], ["routerLink", "/dashboard/registrar-reunion", 1, "nav-link"], ["routerLink", "/dashboard/usuarios", 1, "nav-link"], [1, "navbar-nav", "ml-auto"], [1, "nav-item", "d-none", "d-sm-inline-block", "float-end"], ["href", "#", 1, "nav-link"]],
   template: function HeaderComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0)(1, "ul", 1)(2, "li", 2)(3, "a", 3);
@@ -1814,31 +1822,31 @@ HeaderComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__[
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "ul", 9)(13, "li")(14, "a", 10);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Ambito Territorial");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "li")(17, "a", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "li")(17, "a", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Senado");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li")(20, "a", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li")(20, "a", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Camara");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li")(23, "a", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "li")(23, "a", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Ejecutivo Nacional");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "li")(26, "a", 11);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "li")(26, "a", 12);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Ejecutivo Regional");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "li")(29, "a", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "li")(29, "a", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Corporativo");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "li")(32, "a", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "li")(32, "a", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Representacion Territorial");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "li", 5)(35, "a", 12);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "li", 5)(35, "a", 13);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Registro Reuni\u00F3n");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "li", 5)(38, "a", 13);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "li", 5)(38, "a", 14);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Mi Perfil");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
-      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "ul", 14)(41, "li", 15)(42, "a", 16);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "ul", 15)(41, "li", 16)(42, "a", 17);
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Cerrar Sesi\u00F3n");
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
     }
@@ -1913,9 +1921,9 @@ __webpack_require__.r(__webpack_exports__);
 
 function SidebarComponent_li_14_li_9_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "li", 13)(1, "a", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "li", 13)(1, "a", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "i");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "p", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "p", 19);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
   }
@@ -1931,16 +1939,16 @@ function SidebarComponent_li_14_li_9_Template(rf, ctx) {
 }
 function SidebarComponent_li_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "li", 13)(1, "a", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "li", 13)(1, "a", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](2, "i");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "p");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "span", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "span", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "i", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "i", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ul", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ul", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, SidebarComponent_li_14_li_9_Template, 5, 5, "li", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
   }
@@ -1972,9 +1980,9 @@ SidebarComponent.ɵfac = function SidebarComponent_Factory(t) {
 SidebarComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
   type: SidebarComponent,
   selectors: [["app-sidebar"]],
-  decls: 22,
+  decls: 15,
   vars: 1,
-  consts: [[1, "main-sidebar", "sidebar-dark-primary", "elevation-4"], ["href", "#", 1, "brand-link"], ["src", " ./assets/dist/img/AdminLTELogo.png", "alt", "AdminLTE Logo", 1, "brand-image", "img-circle", "elevation-3", 2, "opacity", ".8"], [1, "brand-text", "font-weight-light"], [1, "sidebar"], [1, "user-panel", "mt-3", "pb-3", "mb-3", "d-flex"], [1, "image"], ["src", "./assets/dist/img/user2-160x160.jpg", "alt", "User Image", 1, "img-circle", "elevation-2"], [1, "info"], ["href", "#", 1, "d-block"], [1, "mt-2"], ["data-widget", "treeview", "role", "menu", "data-accordion", "false", 1, "nav", "nav-pills", "nav-sidebar", "flex-column"], ["class", "nav-item", 4, "ngFor", "ngForOf"], [1, "nav-item"], [1, "nav-link", 2, "cursor", "pointer"], [1, "nav-icon", "fas", "fa-th"], [1, "right", "badge", "badge-danger"], ["href", "#", 1, "nav-link"], [1, "badge", "badge-warning", "ml-2"], [1, "right", "fas", "fa-angle-left"], [1, "nav", "nav-treeview"], [1, "nav-link", 2, "cursor", "pointer", 3, "routerLink"], [1, "ml-2"]],
+  consts: [[1, "main-sidebar", "sidebar-dark-primary", "elevation-4"], ["routerLink", "/dashboard", 1, "brand-link"], ["src", " ./assets/dist/img/AdminLTELogo.png", "alt", "AdminLTE Logo", 1, "brand-image", "img-circle", "elevation-3", 2, "opacity", ".8"], [1, "brand-text", "font-weight-light"], [1, "sidebar"], [1, "user-panel", "mt-3", "pb-3", "mb-3", "d-flex"], [1, "image"], ["src", "./assets/dist/img/user2-160x160.jpg", "alt", "User Image", 1, "img-circle", "elevation-2"], [1, "info"], ["routerLink", "/dashboard/usuarios", 1, "d-block"], [1, "mt-2"], ["data-widget", "treeview", "role", "menu", "data-accordion", "false", 1, "nav", "nav-pills", "nav-sidebar", "flex-column"], ["class", "nav-item", 4, "ngFor", "ngForOf"], [1, "nav-item"], ["href", "#", 1, "nav-link"], [1, "badge", "badge-warning", "ml-2"], [1, "right", "fas", "fa-angle-left"], [1, "nav", "nav-treeview"], [1, "nav-link", 2, "cursor", "pointer", 3, "routerLink"], [1, "ml-2"]],
   template: function SidebarComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "aside", 0)(1, "a", 1);
@@ -1990,13 +1998,7 @@ SidebarComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "nav", 10)(13, "ul", 11);
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, SidebarComponent_li_14_Template, 10, 6, "li", 12);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "li", 13)(16, "a", 14);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](17, "i", 15);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "p");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, " Widgets ");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "span", 16);
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](21, "New");
-      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()()()()()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
     }
     if (rf & 2) {
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](14);

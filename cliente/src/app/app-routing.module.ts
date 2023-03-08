@@ -10,12 +10,13 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 const routes: Routes = [
   { path:'',redirectTo:'/login',pathMatch:'full' },
-  /*
-  { path:'inicio', component:DashboardComponent},
+  
+  { path:'dashboard', component:DashboardComponent},
   { path:'tablas', component:TablasComponent},
+  /*
   { path:'perfil', component:PerfilComponent},
   { path:'registrar-reunion', component:RegistrarReunionComponent},
-  */
+ */ 
 
 
   { path:'**', component:NopageFoundComponent }

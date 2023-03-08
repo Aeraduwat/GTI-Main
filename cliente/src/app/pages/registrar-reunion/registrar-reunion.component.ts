@@ -58,6 +58,8 @@ export class RegistrarReunionComponent implements OnInit {
   this._reunionService.guardarReunion(Reunion).subscribe(data => {
       this.toastr.success('Nueva reunión registrada', 'Nuevo Registro');
       this.router.navigate(['/dashboard/registrar-reunion']);
+      this.obtenerReunion();
+
   }, error => {
     console.log(error);
     this.reunionForm.reset();

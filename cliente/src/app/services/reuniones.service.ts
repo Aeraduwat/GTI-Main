@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ReunionesService {
 
-  url='http://18.231.175.65/api/reuniones/';
+  url='http://18.231.175.65/api/reuniones';
   //enlace
 
   constructor(private http: HttpClient) { }

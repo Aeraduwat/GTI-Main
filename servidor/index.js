@@ -9,6 +9,7 @@ const app = express();
 
 const server = http.createServer(app)
 
+connectarDB();
 app.use(cors());
 app.use(express.json());
 
@@ -22,8 +23,6 @@ app.use('/api/reuniones', require('./routes/reunion'));
 //     resp.send("app is working")
 // })
 
-
-connectarDB();
 server.listen(4000, () => console.log('Desde puerto 4000'));
 
 console.log('desde app');

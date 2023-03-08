@@ -392,7 +392,7 @@ DashboardComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0
   selectors: [["app-dashboard"]],
   decls: 214,
   vars: 0,
-  consts: [[1, "content"], [1, "container-fluid"], [1, "row"], [1, "col-md-4"], [1, "card", "card-info"], [1, "card-header"], [1, "card-title"], [1, "card-body"], [1, "fas", "fa-book", "mr-1"], [1, "text-muted"], [1, "fas", "fa-map-marker-alt", "mr-1"], [1, "fas", "fa-pencil-alt", "mr-1"], [1, "far", "fa-file-alt", "mr-1"], [1, "col-md-8"], [1, "card"], [1, "tab-content"], [1, "table", "table-bordered"], [2, "width", "10px"], [2, "width", "40px"], [1, "card-footer", "clearfix"], [1, "pagination", "pagination-sm", "m-0", "float-right"], [1, "page-item"], ["href", "#", 1, "page-link"]],
+  consts: [[1, "content"], [1, "container-fluid"], [1, "row"], [1, "col-md-4"], [1, "card", "card-info"], [1, "card-header"], [1, "card-title"], [1, "card-body"], [1, "fas", "fa-book", "mr-1"], [1, "text-muted"], [1, "fas", "fa-map-marker-alt", "mr-1"], [1, "fas", "fa-pencil-alt", "mr-1"], [1, "far", "fa-file-alt", "mr-1"], [1, "col-md-8"], [1, "card"], [1, "tab-content"], [1, "table", "table-bordered"], [2, "width", "10px"], [2, "width", "40px"], [1, "card-footer", "clearfix"], [1, "pagination", "pagination-sm", "m-0", "float-right"], [1, "page-item"], ["disabled", "", 1, "page-link"]],
   template: function DashboardComponent_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5)(6, "h3", 6);

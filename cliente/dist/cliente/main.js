@@ -1587,9 +1587,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ReunionesService {
+  //enlace
   constructor(http) {
     this.http = http;
-    this.url = 'http://localhost:4000/api/reuniones/';
+    this.url = 'http://18.231.175.65/api/reuniones/';
   }
   getReuniones() {
     return this.http.get(this.url);

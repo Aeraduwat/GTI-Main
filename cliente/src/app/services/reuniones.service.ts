@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReunionesService {
-  url='http://localhost:4000/api/reuniones/'
+  url='http://18.231.175.65/api/reuniones/';
+  //enlace
 
 
   constructor(private http: HttpClient) { }

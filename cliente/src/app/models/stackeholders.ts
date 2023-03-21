@@ -1,27 +1,16 @@
 export class Stackeholders{
 
-    _id_sh?:number;
-    sector:string;
+    _id?:string;
+    nombre:string;
     region:string;
-    institucion:string;
-    autoridad:string;
     cargo:string;
-    adhesion:number;
-    influencia:number;
-    partido:string;
-    coalicion:string;
 
 
-    constructor(sector:string, region:string, institucion:string, autoridad:string, cargo:string, adhesion:number, influencia:number, partido:string, coalicion:string){
-        this.sector = sector;
+    constructor(nombre:string, region:string, cargo:string){
+      
+        this.nombre = nombre;
         this.region = region;
-        this.institucion = institucion;
-        this.autoridad = autoridad;
         this.cargo = cargo;
-        this.adhesion = adhesion;
-        this.influencia = influencia;
-        this.partido = partido;
-        this.coalicion = coalicion;
     }
 
 }

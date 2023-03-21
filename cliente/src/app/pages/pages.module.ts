@@ -8,6 +8,7 @@ import { PagesComponent } from './pages.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { RegistrarReunionComponent } from './registrar-reunion/registrar-reunion.component';
+import { EvaluacionesComponent } from './evaluaciones/evaluaciones.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { RegistrarReunionComponent } from './registrar-reunion/registrar-reunion
     UsuariosComponent,
     TablasComponent,
     PagesComponent,
-    RegistrarReunionComponent
+    RegistrarReunionComponent,
+    EvaluacionesComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { RegistrarReunionComponent } from './registrar-reunion/registrar-reunion
   exports: [
     DashboardComponent,
     UsuariosComponent,
-    TablasComponent
+    TablasComponent,
+    EvaluacionesComponent
   ]
 })
 export class PagesModule { }

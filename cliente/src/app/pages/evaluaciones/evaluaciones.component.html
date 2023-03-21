@@ -1,0 +1,187 @@
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <!--Filtros -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h2 class="card-title"><b> Filtros </b></h2>
+            </div>
+            <!-- /.card-header  INICIO CAMBIOS-->
+                    
+            <div class="card-body">
+                <table class="table table-borderless ta responsive">
+                  <tbody>
+                  <tr>
+                      <td class="col-4">
+                          <label for="">Región Autoridad :</label> 
+                      </td>
+                      <td>
+                          <select class="form-select"  (change)="getValueRegion($event)">
+                              <<option value="0"> -- Seleccione Región -- </option>
+                              <option *ngFor="let region of listarRegiones" value="{{region._id}}"> {{region.numero}} - {{region.nombre}} </option>
+                          </select>   
+                      </td>
+                      </tr>
+
+                    <tr>
+                      <td class="col-4">
+                          <label for="">Nombre Stakeholder :</label> 
+                      </td>
+                      <td>
+                          <select class="form-select" aria-label="Default select example" 
+                                  [disabled]="listarStakeholders.length == 0"
+                                  (change)="getStakeholder($event)">
+                            <option selected value="0">-- {{placeholder}} --</option>
+                            <option *ngFor="let sh of listarStakeholders" value="{{sh._id}}"> {{sh.nombre | uppercase }} </option>
+                          </select>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          <!-- /.card -->
+       
+        </div>
+        <!-- /.FIN FILTROS -->
+
+        <!-- Tabla Evaluacion -->
+
+        <div class="col-lg-3">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h2 class="card-title"><b> Evaluacion </b></h2>
+            </div>
+            <!-- /.card-header  INICIO CAMBIOS-->
+                    
+              <div class="card-body">
+                  <table class="table table-borderless ta responsive">
+                    <tbody>
+                    <tr>
+                        <td class="col-4">
+                            <label for="">Región :</label> 
+                        </td>
+                        <td>
+                            <input type="text" value="{{nombreRegion}}" disabled placeholder="Región Autoridad">
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                          <label for="">Nombre :</label> 
+                      </td>
+                      <td>  
+                          <input type="text" value="{{nombreSh}}"  disabled placeholder="Nombre Autoridad">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                          <label for="">Cargo :</label> 
+                      </td>
+                      <td>  
+                          <input type="text" name="" id="" value="{{cargo}}" disabled placeholder="Cargo Autoridad">
+                      </td>
+                    </tr>
+                    <!-- PROMEDIO HISTORICO -->
+                    <tr>
+                      <td class="card-header" colspan="2" >
+                          <h2 class="card-title"><b> Promedio histórico </b></h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Adhesión :</label> 
+                    </td>
+                    <td>  
+                        <input type="number" name="" id="" value="{{evaluaciones[2]}}" disabled placeholder="{{placeholderAdhesion}}">
+                    </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Influencia :</label> 
+                    </td>
+                    <td>  
+                        <input type="number" name="" id="" value="{{evaluaciones[3]}}" disabled placeholder="{{placeholderInfluencia}}">
+                    </td>
+                    </tr>
+                    <!-- ULTIMA EVALUACION -->
+                    <tr>
+                      <td class="card-header" colspan="2" >
+                          <h2 class="card-title"><b> Última Evaluación </b></h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Adhesión :</label> 
+                    </td>
+                    <td>  
+                        <input type="number" name="" id="" value="{{evaluaciones[0]}}" disabled placeholder="{{placeholderAdhesion}}">
+                    </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Influencia :</label> 
+                    </td>
+                    <td>  
+                        <input type="number" name="" id="" value="{{evaluaciones[1]}}" disabled placeholder="{{placeholderInfluencia}}">
+                    </td>
+                    </tr>
+
+                    <!-- Nueva Evaluacion -->
+                    <tr>
+                      <td class="card-header" colspan="2" >
+                          <h2 class="card-title" ><b> Nueva Evaluación </b></h2>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Adhesión :</label> 
+                    </td>
+                    <td>  
+                        <input type="number" id="" (change)="setAdhesion($event)" [disabled]="listarStakeholders.length == 0" [ngModel]="adhesionValue">
+                    </td>
+                    </tr>
+                    <tr>
+                      <td class="col-4">
+                        <label for="">Influencia :</label> 
+                    </td>
+                    <td> 
+                        <input type="number" id="influencia" (change)="setInfluencia($event)"  [disabled]="listarStakeholders.length == 0" [ngModel]="influenciaValue">
+                    </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="2" align="right">
+                        <button class="btn btn-primary" type="button" 
+                        [disabled]="listarStakeholders.length == 0"
+                         (click)="agregarEvaluacion()">
+                            Enviar Evaluación
+                        </button>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <!--Filtros -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h2 class="card-title"><b> Gráfico </b></h2>
+              </div>
+              <!-- /.card-header  INICIO CAMBIOS-->
+                      
+              <div class="card-body">
+                
+              </div>
+            </div>
+            <!-- /.card -->
+         
+          </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->

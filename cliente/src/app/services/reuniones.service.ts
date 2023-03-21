@@ -16,7 +16,6 @@ export class ReunionesService {
   getReuniones(): Observable<any>{
 
     return this.http.get(this.url);
-    
   }
 
   eliminarReunion(id: string): Observable<any>{ 

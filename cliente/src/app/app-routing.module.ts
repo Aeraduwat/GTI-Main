@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NopageFoundComponent } from './nopage-found/nopage-found.component';
@@ -6,13 +7,16 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { TablasComponent } from './pages/tablas/tablas.component';
+import { EvaluacionesComponent } from './pages/evaluaciones/evaluaciones.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+
 
 const routes: Routes = [
   { path:'',redirectTo:'/login',pathMatch:'full' },
   
   { path:'dashboard', component:DashboardComponent},
   { path:'tablas', component:TablasComponent},
+  { path:'evaluacion', component:EvaluacionesComponent},
   /*
   { path:'perfil', component:PerfilComponent},
   { path:'registrar-reunion', component:RegistrarReunionComponent},

@@ -7,11 +7,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 //Components
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NopageFoundComponent } from './nopage-found/nopage-found.component';
+
 
 @NgModule({
   imports: [
@@ -23,7 +25,8 @@ import { NopageFoundComponent } from './nopage-found/nopage-found.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    DatePipe
   ],
   declarations: [
     AppComponent,

@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablasComponent } from './tablas/tablas.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { RegistrarReunionComponent } from './registrar-reunion/registrar-reunion.component';
+import { EvaluacionesComponent } from './evaluaciones/evaluaciones.component';
 
 const routes:Routes=[
   { path:'dashboard',component:PagesComponent,
@@ -14,7 +15,9 @@ const routes:Routes=[
       {path:'',component:DashboardComponent, data:{titulo:'Bienvenido'}},
       {path:'tablas', component:TablasComponent, data:{titulo:'Tablas'}},
       {path:'usuarios', component:UsuariosComponent, data:{titulo:'Usuario'}},
-      {path:'registrar-reunion', component:RegistrarReunionComponent, data:{titulo:'Nueva Reunion'}}
+      {path:'registrar-reunion', component:RegistrarReunionComponent, data:{titulo:'Nueva Reunion'}},
+      {path:'evaluaciones', component:EvaluacionesComponent, data:{titulo:'Evaluar Stakeholder'}}
+
 
       
     ] 

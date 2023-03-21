@@ -16,6 +16,10 @@ app.use(express.json());
 
 //api
 app.use('/api/reuniones', require('./routes/reunion'));
+app.use('/api/regiones', require('./routes/region'));
+app.use('/api/stakeholders', require('./routes/stakeholder'));
+app.use('/api/evaluaciones', require('./routes/evaluacion'));
+
 
 
 // //demo

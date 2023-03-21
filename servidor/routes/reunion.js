@@ -1,7 +1,7 @@
 //RUTAS 
 const express = require('express');
 const router = express.Router();
-const reunionController = require('../controllers/reunionesControllers');
+const reunionController = require('../controllers/reunionesController');
 
 //api
 //crear
